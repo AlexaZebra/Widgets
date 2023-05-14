@@ -29,22 +29,18 @@ protected:
 
 public:
     Win(QWidget *parent = nullptr);
-    ~Win(){};
 
 public slots:
  void begin();                  // метод начальной настройки интерфейса
  void calc();                   // метод реализации вычислений
 
-
-private:
-    Ui::Win *ui;
 };
 
 class StrValidator:public QValidator // класс компонента проверки ввода
 {
 public:
  StrValidator(QObject *parent):QValidator(parent){}
- virtual State validate(QString &str,int &pos)const{
+ virtual State validate(QString &str,int &pos)const{ // определение виртуальной функции проверки ввода
     return Acceptable; // метод всегда принимает вводимую строку
  }
 };
