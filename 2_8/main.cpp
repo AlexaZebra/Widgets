@@ -1,8 +1,11 @@
-#include <QCoreApplication>
+#include <QApplication>
+#include "win.h"
 
 int main(int argc, char *argv[])
 {
-    QCoreApplication a(argc, argv);
-
-    return a.exec();
+     QApplication a(argc, argv);
+     Win win(0);
+     win.show();
+     return a.exec();
 }
+
